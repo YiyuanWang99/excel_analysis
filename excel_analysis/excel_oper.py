@@ -77,13 +77,13 @@ def filter_excel_data(excel_display, rButton1, MainWindow):
 
 # 保存数据到excel
 def save_excel(df, is_checked, fiel_name):
-    if (is_checked):  # 选择保存到原来路径
-        writer = pd.ExcelWriter(fiel_name + '.xlsx')
+    if is_checked:  # 选择保存到原来路径
+        writer = pd.ExcelWriter(fiel_name + '_out.xlsx')
     else:  # 选择另存为
         global temp_root
         writer = pd.ExcelWriter(temp_root + '/' + fiel_name + '.xlsx')
     df.to_excel(writer, 'sheet1')
-    writer.save()
+    writer.close()
     print("excel文件成功保存！")
 
 

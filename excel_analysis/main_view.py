@@ -15,43 +15,63 @@ from excel_oper import input_file, get_column_data, clicked_display_excel, commo
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(878, 611)
+        MainWindow.resize(1600, 900)
+
         MainWindow.setIconSize(QtCore.QSize(30, 30))
+
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.list_view = QtWidgets.QListView(self.centralwidget)
-        self.list_view.setGeometry(QtCore.QRect(0, 0, 241, 441))
-        self.list_view.setObjectName("list_view")
+        self.list_view.setGeometry(QtCore.QRect(0, 0, 300, 700))
+        self.list_view.setObjectName("list_view") #文件列表
+
+
         self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
-        self.textEdit.setGeometry(QtCore.QRect(243, 0, 591, 441))
-        self.textEdit.setObjectName("textEdit")
+        self.textEdit.setGeometry(QtCore.QRect(300, 0, 1300, 700))
+        self.textEdit.setObjectName("textEdit") #显示预览
+
+
         self.file_oper_label = QtWidgets.QLabel(self.centralwidget)
-        self.file_oper_label.setGeometry(QtCore.QRect(10, 450, 81, 16))
+        self.file_oper_label.setGeometry(QtCore.QRect(10, 710, 230, 25))
         self.file_oper_label.setObjectName("file_oper_label")
+
+
         self.rButton1 = QtWidgets.QRadioButton(self.centralwidget)
-        self.rButton1.setGeometry(QtCore.QRect(10, 470, 141, 21))
+        self.rButton1.setGeometry(QtCore.QRect(10, 740, 230, 30))
         self.rButton1.setChecked(True)
         self.rButton1.setObjectName("rButton1")
+
+
         self.rButton2 = QtWidgets.QRadioButton(self.centralwidget)
-        self.rButton2.setGeometry(QtCore.QRect(10, 490, 91, 21))
+        self.rButton2.setGeometry(QtCore.QRect(10, 780, 120, 30))
         self.rButton2.setObjectName("rButton2")
+
+
         self.oput_file_dir = QtWidgets.QTextEdit(self.centralwidget)
-        self.oput_file_dir.setGeometry(QtCore.QRect(70, 490, 441, 21))
+        self.oput_file_dir.setGeometry(QtCore.QRect(140, 780, 440, 30))
         self.oput_file_dir.setObjectName("oput_file_dir")
+
+
         self.file_oper_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.file_oper_btn.setGeometry(QtCore.QRect(520, 490, 61, 21))
+        self.file_oper_btn.setGeometry(QtCore.QRect(590, 780, 60, 30))
         self.file_oper_btn.setObjectName("file_oper_btn")
+
+
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+
         self.toolBar = QtWidgets.QToolBar(MainWindow)
         self.toolBar.setIconSize(QtCore.QSize(35, 35))
         self.toolBar.setToolButtonStyle(QtCore.Qt.ToolButtonTextBesideIcon)
         self.toolBar.setObjectName("toolBar")
+
         MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 878, 23))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 900, 25))
+
+
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.button1 = QtWidgets.QAction(MainWindow)
